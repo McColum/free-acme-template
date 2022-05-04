@@ -69,12 +69,6 @@ select {
   }
 }
 
-@media (max-width: 960px)  {
-  .wrapper {
-    transform: scale(90%);
-  }
-}
-
 a {
   text-decoration: none;
   color: #222;
@@ -106,6 +100,7 @@ header {
 }
 
 .wrapper {
+  max-width: 1170px;
   max-width: 1170px;
   padding-left: 20px;
   padding-right: 20px;
