@@ -83,7 +83,7 @@ a {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 62px;
   font-weight: bold;
   color: white;
   line-height: 1.2;
@@ -669,6 +669,10 @@ footer {
   }
 
   .donate__paragraph {
+    width: 100%;
+  }
+
+  .covid__container {
     width: 100%;
   }
 
