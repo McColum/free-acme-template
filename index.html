@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="1170">
+    <meta meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Acme</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css" media="all">
     <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -38,6 +38,9 @@
                                 <div class="header__cart__counter">0</div>
                             </div>
                         </a>
+                        <a href="#" class="burger__menu">
+                            <img src="img/Menu.svg" alt="Menu" class="menu__icon">
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -55,7 +58,7 @@
         </div>
     </section>
     <section class="donate">
-        <div class="donate__container">
+        <div class="donate__container wrapper">
             <div class="donate__article">
                 <div class="donate__headline">
                     <div class="donate__subtext">WAYS TO SUPPORT</div>
@@ -66,25 +69,31 @@
             <div class="donate__options">
                 <div class="donate__block">
                     <div class="donate__picture">
-                        <div class="donate__picture__font donate__picture__number">01</div>
-                        <div class="donate__picture__font donate__picture__headline">SHOP </br> PRODUCTS</div>
-                        <img src="img/Circle.svg" alt="Circle" class="donate__image circle">
+                        <div class="donate__picture__content">
+                            <div class="donate__picture__font donate__picture__number">01</div>
+                            <div class="donate__picture__font donate__picture__headline">SHOP</br> PRODUCTS</div>
+                            <img src="img/Circle.svg" alt="Circle" class="donate__image circle">
+                        </div>
                     </div>
                     <div class="donate__block__paragraph">Our full product line is still available online here on our site! Getting outside and hiking is still something you can do. Get your gear now!</div>
                 </div>
                 <div class="donate__block">
                     <div class="donate__picture">
-                        <div class="donate__picture__font donate__picture__number">02</div>
-                        <div class="donate__picture__font donate__picture__headline">DONATE</div>
-                        <img src="img/Triangle.svg" alt="Triangle" class="donate__image triangle">
+                        <div class="donate__picture__content">
+                            <div class="donate__picture__font donate__picture__number">02</div>
+                            <div class="donate__picture__font donate__picture__headline donate__picture__padding">DONATE</div>
+                            <img src="img/Triangle.svg" alt="Triangle" class="donate__image triangle">
+                        </div>
                     </div>
                     <div class="donate__block__paragraph">Since we've changed the way we operate to online only, and to ensure your safety, not all our staff is working. Donate to keep them afloat.</div>
                 </div>
                 <div class="donate__block">
                     <div class="donate__picture">
-                        <div class="donate__picture__font donate__picture__number">03</div>
-                        <div class="donate__picture__font donate__picture__headline">BUY </br> GIFT CARDS</div>
-                        <img src="img/Square.svg" alt="Square" class="donate__image square">
+                        <div class="donate__picture__content">
+                            <div class="donate__picture__font donate__picture__number">03</div>
+                            <div class="donate__picture__font donate__picture__headline">BUY </br> GIFT CARDS</div>
+                            <img src="img/Square.svg" alt="Square" class="donate__image square">
+                        </div>
                     </div>
                     <div class="donate__block__paragraph">Have all the outdoor gear you need for now? Buy a gift card and use it later or share it with friends and family.</div>
                 </div>
@@ -157,6 +166,9 @@
     </section>
     <section class="article wrapper">
         <div class="article__picture"></div>
+        <div class="article__picture__media">
+            <img src="/img/Woman.jpg" alt="Woman">
+        </div>
         <div class="article__block">
             <div class="article__content">
                 <h2 class="article__heading">Shop Local.</h2>

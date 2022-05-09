@@ -3,6 +3,7 @@
 *::after {
   box-sizing: border-box;
   font-family: 'Sen', sans-serif;
+  overflow-x: hidden;
 }
 
 ul[class],
@@ -60,6 +61,13 @@ select {
   font: inherit;
 }
 
+/*
+If media queries work on desktop and not on mobile devices, 
+then you most likely haven't set the viewport and default zoom. 
+Note: You only need to add one of the code lines above, and 
+usually, the first one does the job.
+*/
+
 @media (prefers-reduced-motion: reduce) {
   * {
   animation-duration: 0.01ms !important;
@@ -75,14 +83,14 @@ a {
 }
 
 h1 {
-  font-size: 62px;
+  font-size: 40px;
   font-weight: bold;
   color: white;
   line-height: 1.2;
 }
 
 h2  {
-  font-size: 45px;
+  font-size: 40px;
   color: #333;
   line-height: 1.2;
 }
@@ -95,12 +103,10 @@ h3 {
 
 header {
   top: 0;
-  width: 100%;
   position: fixed;   
 }
 
 .wrapper {
-  max-width: 1170px;
   max-width: 1170px;
   padding-left: 20px;
   padding-right: 20px;
@@ -116,12 +122,11 @@ header {
 
 .header__covid {
   background-color: #222222;
-  height: 74px;
+  padding-bottom: 15px;
 }
 
 .header__covid__content {
-  max-width: 30%;
-  min-width: 520px;
+  max-width: fit-content;
   padding-top: 20px;
   margin: auto;
   display: flex;
@@ -131,6 +136,9 @@ header {
 .button__link {
   color: white;
   text-align: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .header__button {
@@ -146,6 +154,8 @@ header {
   text-align: center;
   padding-top: 4px;
   font-size: 18px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .header__menu__content {
@@ -159,12 +169,12 @@ header {
 }
 
 .header__menu {
-  height: 73px;
+  padding-bottom: 20px;
   background-color: #eb5757;
 }
 
 .header__options {
-  width: 575px;
+  max-width: fit-content;
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -193,6 +203,10 @@ header {
   color: white;
 }
 
+.header__cart__link {
+  margin-left: 40px;
+}
+
 .header__cart {
   width: 50px;
   height: 33px;
@@ -206,6 +220,13 @@ header {
   width: 20px;
 }
 
+.menu__icon {
+  width: 15px;
+  padding-top: 8px;
+  margin-left: 40px;
+  display: none;
+}
+
 .header__cart__counter {
   width: 18px;
   height: 18px;
@@ -216,6 +237,7 @@ header {
   margin-left: 25px;
   font-size: 12px;
   font-weight: bold;
+  position: absolute;
 }
 
 .merch {
@@ -262,7 +284,7 @@ header {
 
 .donate {
   margin-top: 70px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .donate__container {
@@ -276,15 +298,18 @@ header {
 .donate__article {
   display: flex;
   justify-content: space-between;
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .donate__headline {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.donate__paragraph {
+  width: 50%;
 }
 
 .donate__options {
@@ -292,23 +317,21 @@ header {
   justify-content: space-between;
 }
 
-.donate__paragraph {
-  width: 42%;
-}
-
 .donate__block {
-  padding: 0 20px 0 20px;
-  max-width: 90%;
-  width: 100%;
+  width: 31%;
 }
 
 .donate__picture {
-  height: 350px;
-  border-radius: 5px;
   background-color: #222;
+  border-radius: 5px;
   overflow: hidden;
   margin-bottom: 50px;
   position: relative;
+}
+
+.donate__picture__content {
+  min-height: 350px;
+  padding-bottom: 50px;
 }
 
 .donate__image {
@@ -346,13 +369,17 @@ header {
 .donate__picture__headline {
   text-align: center;
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 40%;
+  white-space: pre;
+  margin-top: 40px;
+}
+
+.donate__picture__padding {
+  padding-top: 15px;
 }
 
 .donate__block__paragraph {
-  width: inherit;
+  padding-bottom: 50px;
 }
 
 .covid {
@@ -362,7 +389,6 @@ header {
 
 .covid__block {
   margin: auto;
-  min-width: 760px;
 }
 
 .covid__container h2, p {
@@ -382,8 +408,9 @@ header {
 }
 
 .covid__container p {
-  width: 400px;
+  width: 70%;
   margin-bottom: 30px;
+  font-size: 18px;
 }
 
 .button__white {
@@ -399,8 +426,7 @@ header {
 }
 
 .shop {
-  margin-bottom: 130px;
-  min-width: 760px;
+  margin-bottom: 70px;
 }
 
 .shop__heading {
@@ -409,10 +435,12 @@ header {
 
 .product__block {
   position: relative;
-  width: 32%;
+  width: 31%;
+  margin-bottom: 20px;
 }
 
 .product__card {
+  width: 100%;
   height: 500px;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -433,8 +461,7 @@ header {
 .shop__products {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
-  min-width: 760px;
+  margin-bottom: 30px;
 }
 
 .product__description {
@@ -510,21 +537,28 @@ header {
   width: 80%;
   margin: 0 0 0 auto;
   border-radius: 5px;
+  padding: 45px;
 }
 
 .article__content {
-  padding: 50px 50px 40px 270px;
+  padding-left: 290px;
+  padding-right: 120px;
   white-space: normal;
 }
 
 .article__picture {
   background: url(img/Woman.jpg) top 80% right 30% / contain no-repeat;
-  background-size: 275%;
+  background-size: 300%;
   width: 350px;
   height: 440px;
   border-radius: 5px;
   position: absolute;
   top: 35px;
+}
+
+.article__picture__media {
+  display: none;
+  width: 100%;
 }
 
 .article__heading {
@@ -537,7 +571,6 @@ header {
 }
 
 .article__content p {
-  width: 75%;
   text-align: left;
   margin-bottom: 10px;
 }
@@ -561,4 +594,104 @@ footer {
 
 .contact {
   width: 30px;
+}
+
+@media screen and (max-width: 970px) {
+  .header__menu {
+    padding-bottom: 35px;
+    padding-top: 15px;
+  }
+
+  .header__menu__content {
+    min-width: 100%;
+  }
+
+  .menu__icon {
+    display: block;
+  }
+
+  .header__list {
+    display: none;
+  }
+  
+  .donate__picture__headline {
+    font-size: 30px;
+  }
+
+  .shop__products {
+    flex-direction: column;
+  }
+
+  .product__block {
+    width: 100%;
+  }
+
+  .article__content {
+    padding-left: 170px;
+    padding-right: 0px;
+  }
+
+  .article__picture {
+    width: 30%;
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 756px) {
+  .header__covid__content {
+    flex-direction: column;
+  }
+
+  .merch__container {
+    max-width: none;
+  }
+
+  .merch {
+    margin-top: 207px;
+  }
+
+  .donate__block {
+    width: 100%;
+  }
+
+  .donate__options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .donate__picture__headline {
+    font-size: 40px;
+  }
+
+  .donate__article {
+    flex-direction: column;
+  }
+
+  .donate__paragraph {
+    width: 100%;
+  }
+
+  .article {
+    flex-direction: column;
+    margin: -20px;
+  }
+
+  .article__block {
+    width: 100%;
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  .article__picture {
+    display: none;
+  }
+
+  .article__picture__media {
+    display: block;
+  }
+
+  .article__content {
+    padding: 50px 0 0;
+  }  
 }
